@@ -15,3 +15,10 @@ Android 14+或某些时期可能需要这个
 180.163.151.161     dl.google.com
 180.163.150.33      dl.l.google.com
 ```
+
+## 规则订阅
+
+https://gcore.jsdelivr.net/gh/entr0pia/fcm-hosts@fcm/fcm-hosts
+
+https://github.com/entr0pia/fcm-hosts/raw/fcm/fcm-hosts
+
