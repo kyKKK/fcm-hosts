@@ -6,8 +6,8 @@ import dayjs from 'dayjs';
 import utc from 'dayjs/plugin/utc';
 import timezone from 'dayjs/plugin/timezone';
 import IpManage from "./IpManage";
-import {githubUrls, providers} from './constants';
-import {buildHosts} from "./utils";
+import { githubUrls, providers } from './constants';
+import { buildHosts } from "./utils";
 
 dayjs.extend(utc);
 dayjs.extend(timezone);
@@ -121,7 +121,7 @@ function updateMd(content: string, config: UpdateConfig) {
   const needUpdate = previousHostRule !== content;
 
   if (needUpdate) {
-    console.log('发现新的Hosts，即将更新文件！');
+    // console.log('发现新的Hosts，即将更新文件！');
 
     const updateTime = dayjs()
       .tz('Asia/Shanghai')
@@ -193,6 +193,13 @@ const speedConfig = {
   providers,
 }
 
+function printNewHosts(newHosts: HostData[]) {
+  console.log("start print")
+  console.log(JSON.stringify(newHosts))
+  console.log("end print")
+}
+
+
 export function updateNextHosts() {
   let ipManage: IpManage;
 
@@ -209,6 +216,8 @@ export function updateNextHosts() {
           ip: item.alive
         })
       })
+      
+      printNewHosts(newHosts)
 
       saveHosts(newHosts, {
         hostDest: nextFilePath.hosts
@@ -220,3 +229,4 @@ export function updateNextHosts() {
     }
   });
 }
+
