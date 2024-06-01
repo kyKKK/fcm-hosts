@@ -219,13 +219,13 @@ export function updateNextHosts() {
       
       printNewHosts(newHosts)
 
-      saveHosts(newHosts, {
-        hostDest: nextFilePath.hosts
-      })
+      // saveHosts(newHosts, {
+      //   hostDest: nextFilePath.hosts
+      // })
 
-      saveHosts(newHosts, {
-        hostDest: nextFilePath.bothHosts
-      })
+      // saveHosts(newHosts, {
+      //   hostDest: nextFilePath.bothHosts
+      // })
     }
   });
 }

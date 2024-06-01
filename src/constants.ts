@@ -35,7 +35,5 @@ export const githubUrls = [
   'alt5-mtalk.google.com',
   'alt6-mtalk.google.com',
   'alt7-mtalk.google.com',
-  'alt8-mtalk.google.com',
-  'dl.google.com',
-  'dl.l.google.com',
+  'alt8-mtalk.google.com'
 ];
